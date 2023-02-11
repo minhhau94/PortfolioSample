@@ -1,0 +1,72 @@
+/* đơn vị rem theo font size, nếu không khai báo font size thì mặc định font size 16px, 1rem = 16px */
+html,
+body{
+    scroll-behavior: smooth;
+}
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+.header .nav-link:hover{
+    /* vì bootstrap có important nên phải gắn thêm important mới đè được */
+    color: #35a22c !important;
+}
+.slideshow .carousel-item img{
+    height: 550px;
+    /* cắt bớt hình để vừa kích thước */
+    object-fit: cover;
+}
+/* canh giữa theo chiều dọc */
+.slideshow .carousel-caption{
+    bottom: 50%;
+    transform: translateY(50%);
+}
+.slideshow .carousel-caption img{
+    width: 150px;
+    height: 150px;
+}
+/* gọi thuộc tính của thẻ */
+.slideshow .carousel-indicators [data-bs-target]{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+.slideshow .carousel-item::before{
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    /* kéo hình */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.portfolio .nav-pills .nav-link.active{
+    background-color: #35a22c !important;
+    color: #fff !important;
+    border-color: #35a22c !important;
+}
+.portfolio .col-4{
+    padding: 0 15px;
+}
+.portfolio .item img{
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 0 0.4rem rgb(0 0 0 / 13%);
+}
+.portfolio .tab-pane{
+    width: 85%;
+    margin: auto;
+}
+.portfolio .card-body{
+    border-radius: 0 0 16px 16px;
+    border: 1px solid transparent;
+}
+
+
+
+
+/* set cho màn hình 1200px 992px(tablet) 768px(đt ngang) 576px(đt dọc)  */
